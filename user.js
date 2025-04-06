@@ -118,9 +118,9 @@ user_pref("devtools.chrome.enabled", true);
 // 启用 WebRender GPU 加速。提高浏览器渲染性能，尤其在处理图形密集型内容（例如视频、动画等）时，可以提供更流畅的体验。
 user_pref('gfx.webrender.all', true);
 
-// Linux 系统上设置视频硬件加速
-user_pref('media.ffmpeg.vaapi.enabled', true);
-user_pref('media.ffmpeg.encoder.enabled', true);
+// // Linux 系统上设置视频硬件加速
+// user_pref('media.ffmpeg.vaapi.enabled', true);
+// user_pref('media.ffmpeg.encoder.enabled', true);
 
 // 禁用代理服务器，直接连接到互联网。tun模式需要
 user_pref("network.proxy.type", 0);
@@ -221,6 +221,23 @@ user_pref("browser.tabs.loadInBackground", false);
 // 禁用标签页内容预览
 user_pref("browser.tabs.hoverPreview.enabled", false);
 
+// 禁用cookie提示横幅
+user_pref("cookiebanners.service.mode", 0);
+user_pref("cookiebanners.service.mode.privateBrowsing", 0);
+
+// 实验性提高性能
+user_pref("javascript.options.baselinejit.threshold", 50);
+user_pref("javascript.options.ion.threshold", 5000);
+user_pref("network.buffer.cache.size", 65535);
+user_pref("browser.display.auto_quality_min_font_size", 0);
+user_pref("javascript.options.concurrent_multiprocess_gcs.cpu_divisor", 8);
+user_pref("javascript.options.baselinejit.threshold", 50);
+user_pref("dom.timeout.throttling_delay", 40);
+user_pref("dom.timeout.budget_throttling_max_delay", 0);
+user_pref("network.buffer.cache.count", 48); // default=24
+
+// 启用kde自己的文件管理器，而不使用gtk自己的文件管理器，因为很难用。
+user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
 
 
 
